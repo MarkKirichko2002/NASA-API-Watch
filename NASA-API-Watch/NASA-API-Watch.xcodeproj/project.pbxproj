@@ -203,6 +203,7 @@
 		821F48EF29FD416100669E26 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				826936EB2A2D1ACF004BBA4E /* Models */,
 				826936EA2A2D15D2004BBA4E /* API */,
 			);
 			path = Services;
@@ -211,7 +212,6 @@
 		821F48F529FD425C00669E26 /* Mars Photos MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				821F48F829FD426C00669E26 /* Model */,
 				821F48F729FD426A00669E26 /* View */,
 				821F48F629FD426800669E26 /* ViewModel */,
 			);
@@ -234,17 +234,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		821F48F829FD426C00669E26 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				821F48FB29FD42B400669E26 /* MarsImage.swift */,
-				821F48FD29FD42CC00669E26 /* Photo.swift */,
-				821F48FF29FD42DE00669E26 /* Camera.swift */,
-				821F490129FD42EF00669E26 /* Rover.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		821F490A29FD4EF000669E26 /* Image Categories MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +247,6 @@
 		821F490F29FD511000669E26 /* APOD MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				821F491229FD511D00669E26 /* Model */,
 				821F491129FD511A00669E26 /* View */,
 				821F491029FD511700669E26 /* ViewModel */,
 			);
@@ -281,14 +269,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		821F491229FD511D00669E26 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				821F491329FD515000669E26 /* Apod.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8227F42129FD6678004AA3CE /* MVVM Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +282,6 @@
 		8227F42229FD6725004AA3CE /* EPIC MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				8227F42529FD673C004AA3CE /* Model */,
 				8227F42429FD6739004AA3CE /* View */,
 				8227F42329FD6737004AA3CE /* ViewModel */,
 			);
@@ -325,22 +304,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		8227F42529FD673C004AA3CE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8227F42629FD6777004AA3CE /* EPIC.swift */,
-				8227F42829FD67B2004AA3CE /* CentroidCoordinates.swift */,
-				8227F42A29FD67CD004AA3CE /* AttitudeQuaternions.swift */,
-				8227F42C29FD67E4004AA3CE /* Coords.swift */,
-				8227F42E29FD67FA004AA3CE /* J2000Position.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		82480C222A095C150032FE27 /* NASA Image Library MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				82480C252A095C360032FE27 /* Model */,
 				82480C242A095C340032FE27 /* View */,
 				82480C232A095C320032FE27 /* ViewModel */,
 			);
@@ -365,25 +331,49 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		82480C252A095C360032FE27 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				82480C302A095D800032FE27 /* NASAImageAndVideoLibrary.swift */,
-				82480C262A095D0F0032FE27 /* Collection.swift */,
-				82480C282A095D370032FE27 /* Item.swift */,
-				82480C2A2A095D4A0032FE27 /* LibraryData.swift */,
-				82480C2C2A095D5A0032FE27 /* Link.swift */,
-				82480C2E2A095D6B0032FE27 /* Metadata.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		826936EA2A2D15D2004BBA4E /* API */ = {
 			isa = PBXGroup;
 			children = (
 				821F48F029FD416D00669E26 /* NASAService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		826936EB2A2D1ACF004BBA4E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				821F491329FD515000669E26 /* Apod.swift */,
+				821F48FB29FD42B400669E26 /* MarsImage.swift */,
+				821F48FD29FD42CC00669E26 /* Photo.swift */,
+				821F48FF29FD42DE00669E26 /* Camera.swift */,
+				821F490129FD42EF00669E26 /* Rover.swift */,
+				82480C302A095D800032FE27 /* NASAImageAndVideoLibrary.swift */,
+				82480C262A095D0F0032FE27 /* Collection.swift */,
+				82480C282A095D370032FE27 /* Item.swift */,
+				82480C2A2A095D4A0032FE27 /* LibraryData.swift */,
+				82480C2C2A095D5A0032FE27 /* Link.swift */,
+				82480C2E2A095D6B0032FE27 /* Metadata.swift */,
+				8227F42629FD6777004AA3CE /* EPIC.swift */,
+				8227F42829FD67B2004AA3CE /* CentroidCoordinates.swift */,
+				8227F42A29FD67CD004AA3CE /* AttitudeQuaternions.swift */,
+				8227F42C29FD67E4004AA3CE /* Coords.swift */,
+				8227F42E29FD67FA004AA3CE /* J2000Position.swift */,
+				8283D62729FEE86E00AA4507 /* Asteroid.swift */,
+				8283D62929FEE8B900AA4507 /* AsteroidLinks.swift */,
+				8283D62B29FEE8CD00AA4507 /* NearEarthObject.swift */,
+				8283D62D29FEE8E000AA4507 /* CloseApproachDatum.swift */,
+				8283D62F29FEE8EF00AA4507 /* MissDistance.swift */,
+				8283D63129FEE90200AA4507 /* OrbitingBody.swift */,
+				8283D63329FEE91900AA4507 /* RelativeVelocity.swift */,
+				8283D63529FEE92C00AA4507 /* EstimatedDiameter.swift */,
+				8283D63729FEE93C00AA4507 /* Feet.swift */,
+				8283D63929FEE94B00AA4507 /* NearEarthObjectLinks.swift */,
+				8283D64629FEF8AF00AA4507 /* MarsWeather.swift */,
+				8283D64829FEF8BF00AA4507 /* ValidityChecks.swift */,
+				8283D64A29FEF8D600AA4507 /* The1219.swift */,
+				8283D64C29FEF8E600AA4507 /* At.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8283D61529FEC80200AA4507 /* sources */ = {
@@ -448,7 +438,6 @@
 		8283D62129FEE7C200AA4507 /* Asteroids MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				8283D62429FEE7DA00AA4507 /* Model */,
 				8283D62329FEE7D800AA4507 /* View */,
 				8283D62229FEE7D600AA4507 /* ViewModel */,
 			);
@@ -469,23 +458,6 @@
 				8283D63B29FEE98200AA4507 /* AsteroidsListView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8283D62429FEE7DA00AA4507 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8283D62729FEE86E00AA4507 /* Asteroid.swift */,
-				8283D62929FEE8B900AA4507 /* AsteroidLinks.swift */,
-				8283D62B29FEE8CD00AA4507 /* NearEarthObject.swift */,
-				8283D62D29FEE8E000AA4507 /* CloseApproachDatum.swift */,
-				8283D62F29FEE8EF00AA4507 /* MissDistance.swift */,
-				8283D63129FEE90200AA4507 /* OrbitingBody.swift */,
-				8283D63329FEE91900AA4507 /* RelativeVelocity.swift */,
-				8283D63529FEE92C00AA4507 /* EstimatedDiameter.swift */,
-				8283D63729FEE93C00AA4507 /* Feet.swift */,
-				8283D63929FEE94B00AA4507 /* NearEarthObjectLinks.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8283D63D29FEEE9D00AA4507 /* View */ = {
@@ -515,7 +487,6 @@
 		8283D64229FEF85E00AA4507 /* Mars Weather */ = {
 			isa = PBXGroup;
 			children = (
-				8283D64529FEF86D00AA4507 /* Model */,
 				8283D64429FEF86B00AA4507 /* View */,
 				8283D64329FEF86900AA4507 /* ViewModel */,
 			);
@@ -536,17 +507,6 @@
 				8283D65029FEF97D00AA4507 /* MarsWeatherView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8283D64529FEF86D00AA4507 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8283D64629FEF8AF00AA4507 /* MarsWeather.swift */,
-				8283D64829FEF8BF00AA4507 /* ValidityChecks.swift */,
-				8283D64A29FEF8D600AA4507 /* The1219.swift */,
-				8283D64C29FEF8E600AA4507 /* At.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
