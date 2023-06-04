@@ -1,0 +1,995 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		821F48D929FD415300669E26 /* NASA API.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 821F48D829FD415300669E26 /* NASA API.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		821F48DE29FD415300669E26 /* NASA_API_WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48DD29FD415300669E26 /* NASA_API_WatchApp.swift */; };
+		821F48E029FD415300669E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48DF29FD415300669E26 /* ContentView.swift */; };
+		821F48E229FD415500669E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821F48E129FD415500669E26 /* Assets.xcassets */; };
+		821F48E529FD415500669E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821F48E429FD415500669E26 /* Preview Assets.xcassets */; };
+		821F48F129FD416D00669E26 /* NASAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48F029FD416D00669E26 /* NASAService.swift */; };
+		821F48F429FD41E400669E26 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 821F48F329FD41E400669E26 /* Alamofire */; };
+		821F48FA29FD428400669E26 /* MarsPhotosListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48F929FD428400669E26 /* MarsPhotosListView.swift */; };
+		821F48FC29FD42B400669E26 /* MarsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48FB29FD42B400669E26 /* MarsImage.swift */; };
+		821F48FE29FD42CC00669E26 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48FD29FD42CC00669E26 /* Photo.swift */; };
+		821F490029FD42DE00669E26 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F48FF29FD42DE00669E26 /* Camera.swift */; };
+		821F490229FD42EF00669E26 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F490129FD42EF00669E26 /* Rover.swift */; };
+		821F490429FD432100669E26 /* MarsPhotosListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F490329FD432100669E26 /* MarsPhotosListViewModel.swift */; };
+		821F490729FD445800669E26 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 821F490629FD445800669E26 /* SDWebImageSwiftUI */; };
+		821F490929FD4AD100669E26 /* ImageInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F490829FD4AD100669E26 /* ImageInfoView.swift */; };
+		821F490C29FD4F1800669E26 /* ImageCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F490B29FD4F1800669E26 /* ImageCategoryModel.swift */; };
+		821F490E29FD4F4300669E26 /* ImageCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F490D29FD4F4300669E26 /* ImageCategoriesView.swift */; };
+		821F491429FD515000669E26 /* Apod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F491329FD515000669E26 /* Apod.swift */; };
+		821F491629FD516500669E26 /* ApodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F491529FD516500669E26 /* ApodViewModel.swift */; };
+		821F491829FD51E100669E26 /* ApodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F491729FD51E100669E26 /* ApodView.swift */; };
+		8227F42729FD6777004AA3CE /* EPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F42629FD6777004AA3CE /* EPIC.swift */; };
+		8227F42929FD67B2004AA3CE /* CentroidCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F42829FD67B2004AA3CE /* CentroidCoordinates.swift */; };
+		8227F42B29FD67CD004AA3CE /* AttitudeQuaternions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F42A29FD67CD004AA3CE /* AttitudeQuaternions.swift */; };
+		8227F42D29FD67E4004AA3CE /* Coords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F42C29FD67E4004AA3CE /* Coords.swift */; };
+		8227F42F29FD67FA004AA3CE /* J2000Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F42E29FD67FA004AA3CE /* J2000Position.swift */; };
+		8227F43129FD6817004AA3CE /* EPICImagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F43029FD6817004AA3CE /* EPICImagesListView.swift */; };
+		8227F43329FD682D004AA3CE /* EPICImagesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227F43229FD682D004AA3CE /* EPICImagesListViewModel.swift */; };
+		82480C272A095D0F0032FE27 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C262A095D0F0032FE27 /* Collection.swift */; };
+		82480C292A095D370032FE27 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C282A095D370032FE27 /* Item.swift */; };
+		82480C2B2A095D4A0032FE27 /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C2A2A095D4A0032FE27 /* LibraryData.swift */; };
+		82480C2D2A095D5A0032FE27 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C2C2A095D5A0032FE27 /* Link.swift */; };
+		82480C2F2A095D6B0032FE27 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C2E2A095D6B0032FE27 /* Metadata.swift */; };
+		82480C312A095D800032FE27 /* NASAImageAndVideoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C302A095D800032FE27 /* NASAImageAndVideoLibrary.swift */; };
+		82480C332A095DD40032FE27 /* NASAImageLibraryListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C322A095DD40032FE27 /* NASAImageLibraryListViewViewModel.swift */; };
+		82480C352A095E6A0032FE27 /* NASAImageLibraryCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C342A095E6A0032FE27 /* NASAImageLibraryCollectionViewCellViewModel.swift */; };
+		82480C372A095EC20032FE27 /* NASAImageLibraryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C362A095EC20032FE27 /* NASAImageLibraryListView.swift */; };
+		82480C392A09601C0032FE27 /* NASAImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82480C382A09601C0032FE27 /* NASAImageViewModel.swift */; };
+		8283D61B29FECAFC00AA4507 /* NASAAppNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D61A29FECAFC00AA4507 /* NASAAppNavigationView.swift */; };
+		8283D61F29FEDDB500AA4507 /* EpicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D61E29FEDDB500AA4507 /* EpicViewModel.swift */; };
+		8283D62629FEE82700AA4507 /* AsteroidsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62529FEE82700AA4507 /* AsteroidsListViewModel.swift */; };
+		8283D62829FEE86E00AA4507 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62729FEE86E00AA4507 /* Asteroid.swift */; };
+		8283D62A29FEE8B900AA4507 /* AsteroidLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62929FEE8B900AA4507 /* AsteroidLinks.swift */; };
+		8283D62C29FEE8CD00AA4507 /* NearEarthObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62B29FEE8CD00AA4507 /* NearEarthObject.swift */; };
+		8283D62E29FEE8E000AA4507 /* CloseApproachDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62D29FEE8E000AA4507 /* CloseApproachDatum.swift */; };
+		8283D63029FEE8EF00AA4507 /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D62F29FEE8EF00AA4507 /* MissDistance.swift */; };
+		8283D63229FEE90200AA4507 /* OrbitingBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63129FEE90200AA4507 /* OrbitingBody.swift */; };
+		8283D63429FEE91900AA4507 /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63329FEE91900AA4507 /* RelativeVelocity.swift */; };
+		8283D63629FEE92C00AA4507 /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63529FEE92C00AA4507 /* EstimatedDiameter.swift */; };
+		8283D63829FEE93C00AA4507 /* Feet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63729FEE93C00AA4507 /* Feet.swift */; };
+		8283D63A29FEE94B00AA4507 /* NearEarthObjectLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63929FEE94B00AA4507 /* NearEarthObjectLinks.swift */; };
+		8283D63C29FEE98200AA4507 /* AsteroidsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D63B29FEE98200AA4507 /* AsteroidsListView.swift */; };
+		8283D64129FEEEFD00AA4507 /* ImageCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64029FEEEFD00AA4507 /* ImageCategoriesViewModel.swift */; };
+		8283D64729FEF8AF00AA4507 /* MarsWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64629FEF8AF00AA4507 /* MarsWeather.swift */; };
+		8283D64929FEF8BF00AA4507 /* ValidityChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64829FEF8BF00AA4507 /* ValidityChecks.swift */; };
+		8283D64B29FEF8D600AA4507 /* The1219.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64A29FEF8D600AA4507 /* The1219.swift */; };
+		8283D64D29FEF8E600AA4507 /* At.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64C29FEF8E600AA4507 /* At.swift */; };
+		8283D64F29FEF92100AA4507 /* MarsWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D64E29FEF92100AA4507 /* MarsWeatherViewModel.swift */; };
+		8283D65129FEF97D00AA4507 /* MarsWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8283D65029FEF97D00AA4507 /* MarsWeatherView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		821F48DA29FD415300669E26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 821F48CC29FD415300669E26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 821F48D729FD415300669E26;
+			remoteInfo = "NASA-API-Watch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		821F48EB29FD415500669E26 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				821F48D929FD415300669E26 /* NASA API.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		821F48D229FD415300669E26 /* NASA-API-Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA-API-Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		821F48D829FD415300669E26 /* NASA API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		821F48DD29FD415300669E26 /* NASA_API_WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_API_WatchApp.swift; sourceTree = "<group>"; };
+		821F48DF29FD415300669E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		821F48E129FD415500669E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		821F48E429FD415500669E26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		821F48F029FD416D00669E26 /* NASAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAService.swift; sourceTree = "<group>"; };
+		821F48F929FD428400669E26 /* MarsPhotosListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosListView.swift; sourceTree = "<group>"; };
+		821F48FB29FD42B400669E26 /* MarsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsImage.swift; sourceTree = "<group>"; };
+		821F48FD29FD42CC00669E26 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		821F48FF29FD42DE00669E26 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		821F490129FD42EF00669E26 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		821F490329FD432100669E26 /* MarsPhotosListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosListViewModel.swift; sourceTree = "<group>"; };
+		821F490829FD4AD100669E26 /* ImageInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoView.swift; sourceTree = "<group>"; };
+		821F490B29FD4F1800669E26 /* ImageCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCategoryModel.swift; sourceTree = "<group>"; };
+		821F490D29FD4F4300669E26 /* ImageCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCategoriesView.swift; sourceTree = "<group>"; };
+		821F491329FD515000669E26 /* Apod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apod.swift; sourceTree = "<group>"; };
+		821F491529FD516500669E26 /* ApodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodViewModel.swift; sourceTree = "<group>"; };
+		821F491729FD51E100669E26 /* ApodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApodView.swift; sourceTree = "<group>"; };
+		8227F42029FD586A004AA3CE /* NASA-API-Watch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NASA-API-Watch-Watch-App-Info.plist"; path = "NASA-API-Watch Watch App/sources/app/NASA-API-Watch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8227F42629FD6777004AA3CE /* EPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPIC.swift; sourceTree = "<group>"; };
+		8227F42829FD67B2004AA3CE /* CentroidCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentroidCoordinates.swift; sourceTree = "<group>"; };
+		8227F42A29FD67CD004AA3CE /* AttitudeQuaternions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttitudeQuaternions.swift; sourceTree = "<group>"; };
+		8227F42C29FD67E4004AA3CE /* Coords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coords.swift; sourceTree = "<group>"; };
+		8227F42E29FD67FA004AA3CE /* J2000Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = J2000Position.swift; sourceTree = "<group>"; };
+		8227F43029FD6817004AA3CE /* EPICImagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICImagesListView.swift; sourceTree = "<group>"; };
+		8227F43229FD682D004AA3CE /* EPICImagesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICImagesListViewModel.swift; sourceTree = "<group>"; };
+		82480C262A095D0F0032FE27 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		82480C282A095D370032FE27 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		82480C2A2A095D4A0032FE27 /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
+		82480C2C2A095D5A0032FE27 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		82480C2E2A095D6B0032FE27 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		82480C302A095D800032FE27 /* NASAImageAndVideoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageAndVideoLibrary.swift; sourceTree = "<group>"; };
+		82480C322A095DD40032FE27 /* NASAImageLibraryListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageLibraryListViewViewModel.swift; sourceTree = "<group>"; };
+		82480C342A095E6A0032FE27 /* NASAImageLibraryCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageLibraryCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		82480C362A095EC20032FE27 /* NASAImageLibraryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageLibraryListView.swift; sourceTree = "<group>"; };
+		82480C382A09601C0032FE27 /* NASAImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAImageViewModel.swift; sourceTree = "<group>"; };
+		8283D61A29FECAFC00AA4507 /* NASAAppNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAppNavigationView.swift; sourceTree = "<group>"; };
+		8283D61E29FEDDB500AA4507 /* EpicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicViewModel.swift; sourceTree = "<group>"; };
+		8283D62529FEE82700AA4507 /* AsteroidsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListViewModel.swift; sourceTree = "<group>"; };
+		8283D62729FEE86E00AA4507 /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		8283D62929FEE8B900AA4507 /* AsteroidLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidLinks.swift; sourceTree = "<group>"; };
+		8283D62B29FEE8CD00AA4507 /* NearEarthObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObject.swift; sourceTree = "<group>"; };
+		8283D62D29FEE8E000AA4507 /* CloseApproachDatum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseApproachDatum.swift; sourceTree = "<group>"; };
+		8283D62F29FEE8EF00AA4507 /* MissDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		8283D63129FEE90200AA4507 /* OrbitingBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitingBody.swift; sourceTree = "<group>"; };
+		8283D63329FEE91900AA4507 /* RelativeVelocity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		8283D63529FEE92C00AA4507 /* EstimatedDiameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
+		8283D63729FEE93C00AA4507 /* Feet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feet.swift; sourceTree = "<group>"; };
+		8283D63929FEE94B00AA4507 /* NearEarthObjectLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearEarthObjectLinks.swift; sourceTree = "<group>"; };
+		8283D63B29FEE98200AA4507 /* AsteroidsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsListView.swift; sourceTree = "<group>"; };
+		8283D64029FEEEFD00AA4507 /* ImageCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCategoriesViewModel.swift; sourceTree = "<group>"; };
+		8283D64629FEF8AF00AA4507 /* MarsWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeather.swift; sourceTree = "<group>"; };
+		8283D64829FEF8BF00AA4507 /* ValidityChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidityChecks.swift; sourceTree = "<group>"; };
+		8283D64A29FEF8D600AA4507 /* The1219.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The1219.swift; sourceTree = "<group>"; };
+		8283D64C29FEF8E600AA4507 /* At.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = At.swift; sourceTree = "<group>"; };
+		8283D64E29FEF92100AA4507 /* MarsWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeatherViewModel.swift; sourceTree = "<group>"; };
+		8283D65029FEF97D00AA4507 /* MarsWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsWeatherView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		821F48D529FD415300669E26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821F490729FD445800669E26 /* SDWebImageSwiftUI in Frameworks */,
+				821F48F429FD41E400669E26 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		821F48CB29FD415300669E26 = {
+			isa = PBXGroup;
+			children = (
+				821F48DC29FD415300669E26 /* NASA-API-Watch Watch App */,
+				821F48D329FD415300669E26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		821F48D329FD415300669E26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				821F48D229FD415300669E26 /* NASA-API-Watch.app */,
+				821F48D829FD415300669E26 /* NASA API.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		821F48DC29FD415300669E26 /* NASA-API-Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				8283D61729FEC81F00AA4507 /* resources */,
+				8283D61529FEC80200AA4507 /* sources */,
+				821F48E329FD415500669E26 /* Preview Content */,
+			);
+			path = "NASA-API-Watch Watch App";
+			sourceTree = "<group>";
+		};
+		821F48E329FD415500669E26 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				821F48E429FD415500669E26 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		821F48EF29FD416100669E26 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				826936EA2A2D15D2004BBA4E /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		821F48F529FD425C00669E26 /* Mars Photos MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				821F48F829FD426C00669E26 /* Model */,
+				821F48F729FD426A00669E26 /* View */,
+				821F48F629FD426800669E26 /* ViewModel */,
+			);
+			path = "Mars Photos MVVM";
+			sourceTree = "<group>";
+		};
+		821F48F629FD426800669E26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				821F490329FD432100669E26 /* MarsPhotosListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		821F48F729FD426A00669E26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821F48F929FD428400669E26 /* MarsPhotosListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821F48F829FD426C00669E26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				821F48FB29FD42B400669E26 /* MarsImage.swift */,
+				821F48FD29FD42CC00669E26 /* Photo.swift */,
+				821F48FF29FD42DE00669E26 /* Camera.swift */,
+				821F490129FD42EF00669E26 /* Rover.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		821F490A29FD4EF000669E26 /* Image Categories MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				8283D63E29FEEED000AA4507 /* Model */,
+				8283D63D29FEEE9D00AA4507 /* View */,
+				8283D63F29FEEEDB00AA4507 /* ViewModel */,
+			);
+			path = "Image Categories MVVM";
+			sourceTree = "<group>";
+		};
+		821F490F29FD511000669E26 /* APOD MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				821F491229FD511D00669E26 /* Model */,
+				821F491129FD511A00669E26 /* View */,
+				821F491029FD511700669E26 /* ViewModel */,
+			);
+			path = "APOD MVVM";
+			sourceTree = "<group>";
+		};
+		821F491029FD511700669E26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				821F491529FD516500669E26 /* ApodViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		821F491129FD511A00669E26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821F491729FD51E100669E26 /* ApodView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		821F491229FD511D00669E26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				821F491329FD515000669E26 /* Apod.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8227F42129FD6678004AA3CE /* MVVM Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8283D62029FEE7A800AA4507 /* Image Modules */,
+				8283D62129FEE7C200AA4507 /* Asteroids MVVM */,
+				8283D64229FEF85E00AA4507 /* Mars Weather */,
+			);
+			path = "MVVM Modules";
+			sourceTree = "<group>";
+		};
+		8227F42229FD6725004AA3CE /* EPIC MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				8227F42529FD673C004AA3CE /* Model */,
+				8227F42429FD6739004AA3CE /* View */,
+				8227F42329FD6737004AA3CE /* ViewModel */,
+			);
+			path = "EPIC MVVM";
+			sourceTree = "<group>";
+		};
+		8227F42329FD6737004AA3CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8227F43229FD682D004AA3CE /* EPICImagesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8227F42429FD6739004AA3CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8227F43029FD6817004AA3CE /* EPICImagesListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8227F42529FD673C004AA3CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8227F42629FD6777004AA3CE /* EPIC.swift */,
+				8227F42829FD67B2004AA3CE /* CentroidCoordinates.swift */,
+				8227F42A29FD67CD004AA3CE /* AttitudeQuaternions.swift */,
+				8227F42C29FD67E4004AA3CE /* Coords.swift */,
+				8227F42E29FD67FA004AA3CE /* J2000Position.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82480C222A095C150032FE27 /* NASA Image Library MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				82480C252A095C360032FE27 /* Model */,
+				82480C242A095C340032FE27 /* View */,
+				82480C232A095C320032FE27 /* ViewModel */,
+			);
+			path = "NASA Image Library MVVM";
+			sourceTree = "<group>";
+		};
+		82480C232A095C320032FE27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				82480C322A095DD40032FE27 /* NASAImageLibraryListViewViewModel.swift */,
+				82480C342A095E6A0032FE27 /* NASAImageLibraryCollectionViewCellViewModel.swift */,
+				82480C382A09601C0032FE27 /* NASAImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		82480C242A095C340032FE27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82480C362A095EC20032FE27 /* NASAImageLibraryListView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		82480C252A095C360032FE27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82480C302A095D800032FE27 /* NASAImageAndVideoLibrary.swift */,
+				82480C262A095D0F0032FE27 /* Collection.swift */,
+				82480C282A095D370032FE27 /* Item.swift */,
+				82480C2A2A095D4A0032FE27 /* LibraryData.swift */,
+				82480C2C2A095D5A0032FE27 /* Link.swift */,
+				82480C2E2A095D6B0032FE27 /* Metadata.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		826936EA2A2D15D2004BBA4E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				821F48F029FD416D00669E26 /* NASAService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8283D61529FEC80200AA4507 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				8283D61629FEC80800AA4507 /* app */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		8283D61629FEC80800AA4507 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				8227F42029FD586A004AA3CE /* NASA-API-Watch-Watch-App-Info.plist */,
+				821F48DD29FD415300669E26 /* NASA_API_WatchApp.swift */,
+				821F48DF29FD415300669E26 /* ContentView.swift */,
+				821F48E129FD415500669E26 /* Assets.xcassets */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		8283D61729FEC81F00AA4507 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8283D61D29FEDDA800AA4507 /* ViewModels */,
+				8283D61929FECAAE00AA4507 /* Views */,
+				821F48EF29FD416100669E26 /* Services */,
+				8227F42129FD6678004AA3CE /* MVVM Modules */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		8283D61929FECAAE00AA4507 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8283D61A29FECAFC00AA4507 /* NASAAppNavigationView.swift */,
+				821F490829FD4AD100669E26 /* ImageInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8283D61D29FEDDA800AA4507 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8283D61E29FEDDB500AA4507 /* EpicViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8283D62029FEE7A800AA4507 /* Image Modules */ = {
+			isa = PBXGroup;
+			children = (
+				821F490A29FD4EF000669E26 /* Image Categories MVVM */,
+				821F490F29FD511000669E26 /* APOD MVVM */,
+				821F48F529FD425C00669E26 /* Mars Photos MVVM */,
+				82480C222A095C150032FE27 /* NASA Image Library MVVM */,
+				8227F42229FD6725004AA3CE /* EPIC MVVM */,
+			);
+			path = "Image Modules";
+			sourceTree = "<group>";
+		};
+		8283D62129FEE7C200AA4507 /* Asteroids MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				8283D62429FEE7DA00AA4507 /* Model */,
+				8283D62329FEE7D800AA4507 /* View */,
+				8283D62229FEE7D600AA4507 /* ViewModel */,
+			);
+			path = "Asteroids MVVM";
+			sourceTree = "<group>";
+		};
+		8283D62229FEE7D600AA4507 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8283D62529FEE82700AA4507 /* AsteroidsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8283D62329FEE7D800AA4507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8283D63B29FEE98200AA4507 /* AsteroidsListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8283D62429FEE7DA00AA4507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8283D62729FEE86E00AA4507 /* Asteroid.swift */,
+				8283D62929FEE8B900AA4507 /* AsteroidLinks.swift */,
+				8283D62B29FEE8CD00AA4507 /* NearEarthObject.swift */,
+				8283D62D29FEE8E000AA4507 /* CloseApproachDatum.swift */,
+				8283D62F29FEE8EF00AA4507 /* MissDistance.swift */,
+				8283D63129FEE90200AA4507 /* OrbitingBody.swift */,
+				8283D63329FEE91900AA4507 /* RelativeVelocity.swift */,
+				8283D63529FEE92C00AA4507 /* EstimatedDiameter.swift */,
+				8283D63729FEE93C00AA4507 /* Feet.swift */,
+				8283D63929FEE94B00AA4507 /* NearEarthObjectLinks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8283D63D29FEEE9D00AA4507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				821F490D29FD4F4300669E26 /* ImageCategoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8283D63E29FEEED000AA4507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				821F490B29FD4F1800669E26 /* ImageCategoryModel.swift */,
+			);
+			path = "Mod\bel";
+			sourceTree = "<group>";
+		};
+		8283D63F29FEEEDB00AA4507 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8283D64029FEEEFD00AA4507 /* ImageCategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8283D64229FEF85E00AA4507 /* Mars Weather */ = {
+			isa = PBXGroup;
+			children = (
+				8283D64529FEF86D00AA4507 /* Model */,
+				8283D64429FEF86B00AA4507 /* View */,
+				8283D64329FEF86900AA4507 /* ViewModel */,
+			);
+			path = "Mars Weather";
+			sourceTree = "<group>";
+		};
+		8283D64329FEF86900AA4507 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8283D64E29FEF92100AA4507 /* MarsWeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8283D64429FEF86B00AA4507 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8283D65029FEF97D00AA4507 /* MarsWeatherView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8283D64529FEF86D00AA4507 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8283D64629FEF8AF00AA4507 /* MarsWeather.swift */,
+				8283D64829FEF8BF00AA4507 /* ValidityChecks.swift */,
+				8283D64A29FEF8D600AA4507 /* The1219.swift */,
+				8283D64C29FEF8E600AA4507 /* At.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		821F48D129FD415300669E26 /* NASA-API-Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821F48EC29FD415500669E26 /* Build configuration list for PBXNativeTarget "NASA-API-Watch" */;
+			buildPhases = (
+				821F48D029FD415300669E26 /* Resources */,
+				821F48EB29FD415500669E26 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				821F48DB29FD415300669E26 /* PBXTargetDependency */,
+			);
+			name = "NASA-API-Watch";
+			productName = "NASA-API-Watch";
+			productReference = 821F48D229FD415300669E26 /* NASA-API-Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		821F48D729FD415300669E26 /* NASA-API-Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 821F48E829FD415500669E26 /* Build configuration list for PBXNativeTarget "NASA-API-Watch Watch App" */;
+			buildPhases = (
+				821F48D429FD415300669E26 /* Sources */,
+				821F48D529FD415300669E26 /* Frameworks */,
+				821F48D629FD415300669E26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NASA-API-Watch Watch App";
+			packageProductDependencies = (
+				821F48F329FD41E400669E26 /* Alamofire */,
+				821F490629FD445800669E26 /* SDWebImageSwiftUI */,
+			);
+			productName = "NASA-API-Watch Watch App";
+			productReference = 821F48D829FD415300669E26 /* NASA API.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		821F48CC29FD415300669E26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					821F48D129FD415300669E26 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					821F48D729FD415300669E26 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 821F48CF29FD415300669E26 /* Build configuration list for PBXProject "NASA-API-Watch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 821F48CB29FD415300669E26;
+			packageReferences = (
+				821F48F229FD41E400669E26 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				821F490529FD445800669E26 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
+			productRefGroup = 821F48D329FD415300669E26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				821F48D129FD415300669E26 /* NASA-API-Watch */,
+				821F48D729FD415300669E26 /* NASA-API-Watch Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		821F48D029FD415300669E26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		821F48D629FD415300669E26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				821F48E529FD415500669E26 /* Preview Assets.xcassets in Resources */,
+				821F48E229FD415500669E26 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		821F48D429FD415300669E26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8227F42929FD67B2004AA3CE /* CentroidCoordinates.swift in Sources */,
+				8283D62C29FEE8CD00AA4507 /* NearEarthObject.swift in Sources */,
+				82480C352A095E6A0032FE27 /* NASAImageLibraryCollectionViewCellViewModel.swift in Sources */,
+				8283D64D29FEF8E600AA4507 /* At.swift in Sources */,
+				82480C2B2A095D4A0032FE27 /* LibraryData.swift in Sources */,
+				821F490E29FD4F4300669E26 /* ImageCategoriesView.swift in Sources */,
+				8283D63229FEE90200AA4507 /* OrbitingBody.swift in Sources */,
+				82480C372A095EC20032FE27 /* NASAImageLibraryListView.swift in Sources */,
+				821F490929FD4AD100669E26 /* ImageInfoView.swift in Sources */,
+				821F491829FD51E100669E26 /* ApodView.swift in Sources */,
+				82480C312A095D800032FE27 /* NASAImageAndVideoLibrary.swift in Sources */,
+				82480C272A095D0F0032FE27 /* Collection.swift in Sources */,
+				821F490429FD432100669E26 /* MarsPhotosListViewModel.swift in Sources */,
+				82480C2F2A095D6B0032FE27 /* Metadata.swift in Sources */,
+				82480C332A095DD40032FE27 /* NASAImageLibraryListViewViewModel.swift in Sources */,
+				821F48FE29FD42CC00669E26 /* Photo.swift in Sources */,
+				82480C292A095D370032FE27 /* Item.swift in Sources */,
+				821F48F129FD416D00669E26 /* NASAService.swift in Sources */,
+				8227F42729FD6777004AA3CE /* EPIC.swift in Sources */,
+				8283D63629FEE92C00AA4507 /* EstimatedDiameter.swift in Sources */,
+				821F48E029FD415300669E26 /* ContentView.swift in Sources */,
+				821F491429FD515000669E26 /* Apod.swift in Sources */,
+				8283D62829FEE86E00AA4507 /* Asteroid.swift in Sources */,
+				8283D64B29FEF8D600AA4507 /* The1219.swift in Sources */,
+				82480C2D2A095D5A0032FE27 /* Link.swift in Sources */,
+				8283D63029FEE8EF00AA4507 /* MissDistance.swift in Sources */,
+				821F48FA29FD428400669E26 /* MarsPhotosListView.swift in Sources */,
+				8283D64129FEEEFD00AA4507 /* ImageCategoriesViewModel.swift in Sources */,
+				8283D63A29FEE94B00AA4507 /* NearEarthObjectLinks.swift in Sources */,
+				8283D65129FEF97D00AA4507 /* MarsWeatherView.swift in Sources */,
+				8283D61B29FECAFC00AA4507 /* NASAAppNavigationView.swift in Sources */,
+				8283D64929FEF8BF00AA4507 /* ValidityChecks.swift in Sources */,
+				8283D64729FEF8AF00AA4507 /* MarsWeather.swift in Sources */,
+				82480C392A09601C0032FE27 /* NASAImageViewModel.swift in Sources */,
+				8227F42F29FD67FA004AA3CE /* J2000Position.swift in Sources */,
+				8283D63C29FEE98200AA4507 /* AsteroidsListView.swift in Sources */,
+				8227F42B29FD67CD004AA3CE /* AttitudeQuaternions.swift in Sources */,
+				8227F43129FD6817004AA3CE /* EPICImagesListView.swift in Sources */,
+				821F491629FD516500669E26 /* ApodViewModel.swift in Sources */,
+				821F490229FD42EF00669E26 /* Rover.swift in Sources */,
+				8283D62629FEE82700AA4507 /* AsteroidsListViewModel.swift in Sources */,
+				8227F42D29FD67E4004AA3CE /* Coords.swift in Sources */,
+				821F490C29FD4F1800669E26 /* ImageCategoryModel.swift in Sources */,
+				8283D61F29FEDDB500AA4507 /* EpicViewModel.swift in Sources */,
+				821F48FC29FD42B400669E26 /* MarsImage.swift in Sources */,
+				8283D64F29FEF92100AA4507 /* MarsWeatherViewModel.swift in Sources */,
+				8283D62A29FEE8B900AA4507 /* AsteroidLinks.swift in Sources */,
+				8227F43329FD682D004AA3CE /* EPICImagesListViewModel.swift in Sources */,
+				8283D63429FEE91900AA4507 /* RelativeVelocity.swift in Sources */,
+				821F490029FD42DE00669E26 /* Camera.swift in Sources */,
+				8283D63829FEE93C00AA4507 /* Feet.swift in Sources */,
+				821F48DE29FD415300669E26 /* NASA_API_WatchApp.swift in Sources */,
+				8283D62E29FEE8E000AA4507 /* CloseApproachDatum.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		821F48DB29FD415300669E26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 821F48D729FD415300669E26 /* NASA-API-Watch Watch App */;
+			targetProxy = 821F48DA29FD415300669E26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		821F48E629FD415500669E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		821F48E729FD415500669E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		821F48E929FD415500669E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NASA-API-Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 265GKHT32M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NASA-API-Watch Watch App/sources/app/NASA-API-Watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NASA-API-Watch.watchkitapp";
+				PRODUCT_NAME = "NASA API";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		821F48EA29FD415500669E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NASA-API-Watch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 265GKHT32M;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "NASA-API-Watch Watch App/sources/app/NASA-API-Watch-Watch-App-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NASA-API-Watch.watchkitapp";
+				PRODUCT_NAME = "NASA API";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
+		821F48ED29FD415500669E26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 265GKHT32M;
+				INFOPLIST_KEY_CFBundleDisplayName = "NASA-API-Watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NASA-API-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		821F48EE29FD415500669E26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 265GKHT32M;
+				INFOPLIST_KEY_CFBundleDisplayName = "NASA-API-Watch";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NASA-API-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		821F48CF29FD415300669E26 /* Build configuration list for PBXProject "NASA-API-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821F48E629FD415500669E26 /* Debug */,
+				821F48E729FD415500669E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		821F48E829FD415500669E26 /* Build configuration list for PBXNativeTarget "NASA-API-Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821F48E929FD415500669E26 /* Debug */,
+				821F48EA29FD415500669E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		821F48EC29FD415500669E26 /* Build configuration list for PBXNativeTarget "NASA-API-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				821F48ED29FD415500669E26 /* Debug */,
+				821F48EE29FD415500669E26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		821F48F229FD41E400669E26 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+		821F490529FD445800669E26 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		821F48F329FD41E400669E26 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 821F48F229FD41E400669E26 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		821F490629FD445800669E26 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 821F490529FD445800669E26 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 821F48CC29FD415300669E26 /* Project object */;
+}
